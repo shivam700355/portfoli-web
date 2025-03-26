@@ -11,8 +11,8 @@ export const Navbar = () => {
       <header id="navbar" className="z-50 fixed w-full bg-gray-950 bg-opacity-90 shadow-md">
         <nav className="flex items-center justify-between py-4 px-6">
           {/* Logo */}
-          <div id="logo">
-            <img src={image} alt="logo" className="h-10 w-auto" />
+          <div id="logo" className="text-white">
+          Shivam Maurya
           </div>
 
           {/* Desktop Menu */}
