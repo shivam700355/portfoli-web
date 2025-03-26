@@ -1,7 +1,7 @@
 import { About } from "./About";
 import { Education } from "./Education";
-import { RecentWork } from "./RecentWork";
-import { TechSkills } from "./TechSkills";
+import { Project } from "./Project";
+import { Skill } from "./Skill";
 
 export const Home = () => {
   return (
@@ -13,10 +13,10 @@ export const Home = () => {
         <Education />
       </div>
       <div id="skills">
-        <TechSkills />
+        <Skill />
       </div>
       <div id="projects">
-        <RecentWork />
+        <Project />
       </div>
     </>
   );

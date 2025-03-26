@@ -2,7 +2,7 @@ import { FaJs, FaNodeJs, FaHtml5, FaCss3Alt, FaReact, FaPhp, FaLaravel } from "r
 import { SiMongodb, SiMysql, SiExpress, SiJquery } from "react-icons/si";
 import { motion } from "framer-motion";
 
-export const TechSkills = () => {
+export const Skill = () => {
   const skillsData = [
     { id: 1, name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-2xl" /> },
     { id: 2, name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-2xl" /> },

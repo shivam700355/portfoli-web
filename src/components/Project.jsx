@@ -68,7 +68,7 @@ const projects = [
   },
 ];
 
-export const RecentWork = () => {
+export const Project = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
