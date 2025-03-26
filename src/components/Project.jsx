@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import todoImage from "../assets/react.svg";
-import Daylogsweb from "../assets/Daylogsweb.png";
-import Daylogsmob from "../assets/Daylogsmob.jpg";
+import Daylogsweb from "../assets/daylogsweb.png";
+import Daylogsmob from "../assets/daylogsmob.jpg";
 import nodetodo from "../assets/nodetodo.png";
 import todocalutil from "../assets/todocalutil.png";
 import Video from "../assets/multitask.mp4"; // Corrected variable name
