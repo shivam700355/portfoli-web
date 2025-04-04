@@ -29,14 +29,15 @@ export const Education = () => {
       company: "Varion Advisors Analytics",
       year: "2024 - Present",
       duration: "1.4 Year",
-      description: "Working with PHP, Laravel, React, React Native, Bootstrap, Tailwind, JavaScript (jQuery), and Bootstrap.",
+      description:
+        "Working with PHP, Laravel, React, React Native, Bootstrap, Tailwind, JavaScript (jQuery), and Bootstrap.",
     },
     {
       id: 2,
       role: "Software Trainee / Intern",
       company: "Varion Advisors Analytics Pvt. Ltd.",
       year: "2023 - 2024",
-      duration: "3 Month",
+      duration: "3 Months",
       description: "Developed web applications and dashboards using Laravel and Bootstrap.",
     },
   ];
@@ -45,10 +46,11 @@ export const Education = () => {
     <div className="my-10" id="EducationExperience">
       <div className="w-11/12 md:w-2/3 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-          {/* Qualifications */}
+          {/* Education Section */}
           <div className="w-full">
-            <h1 className="my-3 text-3xl font-bold text-center text-gray-700 flex items-center gap-2">
-              <MdCastForEducation className="text-4xl text-gray-700" /> Qualifications
+            <h1 className="my-3 text-3xl font-bold text-center text-gray-700 flex items-center justify-center gap-2">
+              <MdCastForEducation className="text-4xl text-gray-700" />
+              Qualifications
             </h1>
             <hr className="w-full mb-6 border-gray-300" />
             <div className="relative w-full">
@@ -62,7 +64,7 @@ export const Education = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="absolute w-[12px] h-[12px] rounded-full top-6 bg-gray-500 -left-6 hover:bg-amber-600 transition-all"></div>
+                  <div className="absolute w-[12px] h-[12px] rounded-full top-8 bg-gray-500 -left-2 hover:bg-amber-600 transition-all"></div>
                   <button className="py-1 px-5 text-lg bg-gray-400 border-0 rounded-xl font-medium text-white hover:bg-amber-600 transition-transform">
                     {item.year}
                   </button>
@@ -73,22 +75,21 @@ export const Education = () => {
                     <strong>University:</strong> {item.university}
                   </p>
                   <p className="py-1 text-gray-600">
-                    <strong>Duration:</strong> {item.duration && <span> ({item.duration})</span>}
+                    <strong>Duration:</strong> {item.duration}
                   </p>
-                  {item.specialization && (
-                    <p className="py-1 text-gray-600">
-                      <strong>Specialization:</strong> {item.specialization}
-                    </p>
-                  )}
+                  <p className="py-1 text-gray-600">
+                    <strong>Specialization:</strong> {item.specialization}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Experience */}
+          {/* Experience Section */}
           <div className="w-full">
-            <h1 className="my-3 text-3xl font-bold text-center text-gray-700 flex items-center gap-2">
-              <FaBriefcase className="text-4xl text-gray-700" /> Experience
+            <h1 className="my-3 text-3xl font-bold text-center text-gray-700 flex items-center justify-center gap-2">
+              <FaBriefcase className="text-4xl text-gray-700" />
+              Experience
             </h1>
             <hr className="w-full mb-6 border-gray-300" />
             <div className="relative w-full">
@@ -96,13 +97,13 @@ export const Education = () => {
               {experience.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  className="bg-white p-5 shadow-md rounded-lg mb-6 w-full"
+                  className="relative bg-white p-5 shadow-md rounded-lg mb-6 w-full"
                   whileHover={{ scale: 1.02 }}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="w-[12px] h-[12px] rounded-full top-6 bg-gray-500 -left-6 hover:bg-amber-600 transition-all"></div>
+                  <div className="absolute w-[12px] h-[12px] rounded-full top-8 bg-gray-500 -left-2 hover:bg-amber-600 transition-all"></div>
                   <button className="py-1 px-5 text-lg bg-gray-400 border-0 rounded-xl font-medium text-white hover:bg-amber-600 transition-transform">
                     {item.year}
                   </button>
