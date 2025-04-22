@@ -2,27 +2,50 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Daylogsweb from "../assets/daylogsweb.png";
 import Daylogsmob from "../assets/daylogsmob.jpg";
+import Daylogsmobile1 from "../assets/daylogsmobile1.jpg";
+import Daylogsmobile2 from "../assets/daylogsmobile2.jpg";
+import Daylogsmobile3 from "../assets/daylogsmobile3.jpg";
+import Daylogsmobile4 from "../assets/daylogsmobile4.jpg";
+import Daylogsmobile5 from "../assets/daylogsmobile5.jpg";
+import Daylogsmobile6 from "../assets/daylogsmobile6.jpg";
+import Daylogsmobile7 from "../assets/daylogsmobile7.jpg";
 import nodetodo from "../assets/nodetodo.png";
+import dashboard1 from '../assets/upidashboard.png';
+import dashboard2 from '../assets/upicondashboard.png';
+import dashboard3 from '../assets/upicondashboard1.png';
+import dashboard4 from '../assets/upicondashboard2.png';
+
+
 import todocalutil from "../assets/todocalutil.png";
+import musice1 from '../assets/musice1.jpg';
+import musice2 from '../assets/musice2.jpg';
+import musice3 from '../assets/musice3.jpg';
+import musice4 from '../assets/musice4.jpg';
 import Video from "../assets/multitask.mp4"; // Corrected variable name
 import { CiLink } from "react-icons/ci";
+
 const projects = [
   {
     id: 1,
-    name: "Daylogs Mobile Application",
+    name: "Music Application ",
     description:
-      "A mobile application for tracking daily activities and logs, developed using React Native Expo and RESTful APIs.",
-    image: Daylogsmob,
-    technologies: ["React Native Expo", "RESTful API"],
-    github: "#",
+      "Create a music mobile app using React Native Expo with a sleek UI. Implement components like a player, song list, album art, play/pause buttons, volume control, and track navigation.",
+    images: [musice4,musice3, musice1, musice2],  // Multiple images
+    technologies: [
+      "React Native Expo",
+      "CSS",
+      "JavaScript",
+    ],
+    github: "https://github.com/shivam700355/Daylogs-HRMS",
     live: "#",
   },
+ 
   {
     id: 2,
     name: "Daylogs Web Application",
     description:
       "A web-based platform designed to manage and record daily logs, using PHP, MySQL, and modern web technologies.",
-    image: Daylogsweb,
+    images: [Daylogsweb],
     technologies: [
       "HTML",
       "CSS",
@@ -32,31 +55,32 @@ const projects = [
       "MySQL",
       "jQuery",
     ],
-    github: "#",
+    github: "https://github.com/shivam700355/Daylogs-HRMS",
     live: "#",
   },
   {
     id: 3,
-    name: "ToDoList App",
+    name: "CRM Dashboard ",
     description:
-      "A simple and efficient to-do list application built with React and Bootstrap for managing daily tasks.",
-    image: nodetodo,
-    technologies: ["Node", "Express", "EJS", "Bootstrap", "JavaScript"],
-    github: "https://github.com/shivam700355/CRUD_Using_node_js",
+      "create a Laravel CRM dashboard with role-wise access and authentication for each role (Admin, SPOC, Vertical Head, Team, User), follow these steps.",
+    images: [dashboard2,dashboard1,dashboard4,dashboard3],
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Laravel", "Mysql", "Bootstrap", "Laravel"],
+    github: "https://github.com/shivam700355/CRM_Dashboard",
     live: "https://crud-three-lovat.vercel.app/",
   },
   {
     id: 4,
-    name: "ToDo, Calculator, Text Util App",
+    name: "Daylogs Mobile Application",
     description:
-      "A versatile app combining a to-do list, calculator, and text utility features, built with React and Bootstrap for a seamless user experience.",
-    image: todocalutil,
-    technologies: ["React", "JavaScript"],
-    github: "https://github.com/shivam700355/Todo-list",
-    live: "https://todo-list-mauve-phi.vercel.app/",
+      "A mobile application for tracking daily activities and logs, developed using React Native Expo and RESTful APIs.",
+    images: [Daylogsmob,Daylogsmobile1,Daylogsmobile2,Daylogsmobile3,Daylogsmobile4,Daylogsmobile5,Daylogsmobile6,Daylogsmobile7],
+    technologies: ["React Native Expo", "RESTful API"],
+    github: "https://play.google.com/store/search?q=daylogs&c=apps&hl=en_IN",
+    live: "#",
   },
+
   {
-    id: 5,
+    id: 7,
     name: "ToDo, Calculator, Text Util Mobile Application",
     description:
       "A feature-rich mobile app that includes a to-do list, calculator, and text utilities, designed with React Native CLI and SQLite for smooth and efficient performance.",
@@ -85,12 +109,24 @@ export const Project = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {project.image ? (
+            {project.images && project.images.length > 1 ? (
+              <div className="flex overflow-x-auto space-x-4">
+                {project.images.map((image, i) => (
+                  <img
+                    key={i}
+                    src={image}
+                    alt={project.name}
+                    className="w-48 h-48 object-cover rounded-md"
+                    onClick={() => setSelectedImage(image)}
+                  />
+                ))}
+              </div>
+            ) : project.images ? (
               <img
-                src={project.image}
+                src={project.images[0]}
                 alt={project.name}
                 className="w-full h-48 object-cover rounded-md"
-                onClick={() => setSelectedImage(project.image)}
+                onClick={() => setSelectedImage(project.images[0])}
               />
             ) : project.video ? (
               <video controls className="w-full h-48 object-cover rounded-md">
