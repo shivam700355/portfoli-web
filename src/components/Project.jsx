@@ -30,9 +30,11 @@ import musice2 from "../assets/musice2.jpg";
 import musice3 from "../assets/musice3.jpg";
 import musice4 from "../assets/musice4.jpg";
 
-// Video
-import Video from "../assets/multitask.mp4";
-
+// App
+import multitask1 from "../assets/multitask1.jpg";
+import multitask2 from "../assets/multitask2.jpg";
+import multitask3 from "../assets/multitask3.jpg";
+import multitask4 from "../assets/multitask4.jpg";
 const projects = [
   {
     id: 1,
@@ -103,7 +105,7 @@ const projects = [
     name: "ToDo, Calculator, Text Util Mobile Application",
     description:
       "A feature-rich mobile app that includes a to-do list, calculator, and text utilities, designed with React Native CLI and SQLite.",
-    video: Video,
+    images: [multitask1,multitask2,multitask3,multitask4],
     technologies: ["React Native CLI", "SQLite Database"],
     github: "https://github.com/shivam700355/MultiTaskt",
     live: "#",
