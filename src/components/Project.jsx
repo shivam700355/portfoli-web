@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { CiLink } from "react-icons/ci";
+
+// Web App Images
 import Daylogsweb from "../assets/daylogsweb.png";
-import Daylogsmob from "../assets/daylogsmob.jpg";
+import Daylogsweb1 from "../assets/daylogsweb1.png";
+import Daylogsweb2 from "../assets/daylogsweb2.png";
+import Daylogsweb3 from "../assets/daylogsweb3.png";
+import Daylogsweb4 from "../assets/daylogsweb4.png";
+
+// Mobile App Images
 import Daylogsmobile1 from "../assets/daylogsmobile1.jpg";
 import Daylogsmobile2 from "../assets/daylogsmobile2.jpg";
 import Daylogsmobile3 from "../assets/daylogsmobile3.jpg";
@@ -9,43 +17,39 @@ import Daylogsmobile4 from "../assets/daylogsmobile4.jpg";
 import Daylogsmobile5 from "../assets/daylogsmobile5.jpg";
 import Daylogsmobile6 from "../assets/daylogsmobile6.jpg";
 import Daylogsmobile7 from "../assets/daylogsmobile7.jpg";
-import nodetodo from "../assets/nodetodo.png";
-import dashboard1 from '../assets/upidashboard.png';
-import dashboard2 from '../assets/upicondashboard.png';
-import dashboard3 from '../assets/upicondashboard1.png';
-import dashboard4 from '../assets/upicondashboard2.png';
 
+// Dashboard Images
+import dashboard1 from "../assets/upidashboard.png";
+import dashboard2 from "../assets/upicondashboard.png";
+import dashboard3 from "../assets/upicondashboard1.png";
+import dashboard4 from "../assets/upicondashboard2.png";
 
-import todocalutil from "../assets/todocalutil.png";
-import musice1 from '../assets/musice1.jpg';
-import musice2 from '../assets/musice2.jpg';
-import musice3 from '../assets/musice3.jpg';
-import musice4 from '../assets/musice4.jpg';
-import Video from "../assets/multitask.mp4"; // Corrected variable name
-import { CiLink } from "react-icons/ci";
+// Music App Images
+import musice1 from "../assets/musice1.jpg";
+import musice2 from "../assets/musice2.jpg";
+import musice3 from "../assets/musice3.jpg";
+import musice4 from "../assets/musice4.jpg";
+
+// Video
+import Video from "../assets/multitask.mp4";
 
 const projects = [
   {
     id: 1,
-    name: "Music Application ",
+    name: "Music Application",
     description:
       "Create a music mobile app using React Native Expo with a sleek UI. Implement components like a player, song list, album art, play/pause buttons, volume control, and track navigation.",
-    images: [musice4,musice3, musice1, musice2],  // Multiple images
-    technologies: [
-      "React Native Expo",
-      "CSS",
-      "JavaScript",
-    ],
-    github: "https://github.com/shivam700355/Daylogs-HRMS",
+    images: [musice4, musice3, musice1, musice2],
+    technologies: ["React Native Expo", "CSS", "JavaScript"],
+    github: "https://github.com/shivam700355/Music-App-",
     live: "#",
   },
- 
   {
     id: 2,
     name: "Daylogs Web Application",
     description:
-      "A web-based platform designed to manage and record daily logs, using PHP, MySQL, and modern web technologies.",
-    images: [Daylogsweb],
+      "A web-based platform designed to manage and record daily logs, built using PHP, MySQL, and modern web technologies.",
+    images: [Daylogsweb, Daylogsweb1, Daylogsweb2, Daylogsweb3, Daylogsweb4],
     technologies: [
       "HTML",
       "CSS",
@@ -60,11 +64,18 @@ const projects = [
   },
   {
     id: 3,
-    name: "CRM Dashboard ",
+    name: "CRM Dashboard",
     description:
-      "create a Laravel CRM dashboard with role-wise access and authentication for each role (Admin, SPOC, Vertical Head, Team, User), follow these steps.",
-    images: [dashboard2,dashboard1,dashboard4,dashboard3],
-    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Laravel", "Mysql", "Bootstrap", "Laravel"],
+      "Create a Laravel CRM dashboard with role-wise access and authentication for Admin, SPOC, Vertical Head, Team, and User roles.",
+    images: [dashboard2, dashboard1, dashboard4, dashboard3],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Laravel",
+      "MySQL",
+    ],
     github: "https://github.com/shivam700355/CRM_Dashboard",
     live: "https://crud-three-lovat.vercel.app/",
   },
@@ -73,18 +84,26 @@ const projects = [
     name: "Daylogs Mobile Application",
     description:
       "A mobile application for tracking daily activities and logs, developed using React Native Expo and RESTful APIs.",
-    images: [Daylogsmob,Daylogsmobile1,Daylogsmobile2,Daylogsmobile3,Daylogsmobile4,Daylogsmobile5,Daylogsmobile6,Daylogsmobile7],
+    images: [
+      Daylogsmobile1,
+      Daylogsmobile2,
+      Daylogsmobile3,
+      Daylogsmobile4,
+      Daylogsmobile5,
+      Daylogsmobile6,
+      Daylogsmobile7,
+    ],
     technologies: ["React Native Expo", "RESTful API"],
-    github: "https://play.google.com/store/search?q=daylogs&c=apps&hl=en_IN",
+    github:
+      "https://play.google.com/store/search?q=daylogs&c=apps&hl=en_IN",
     live: "#",
   },
-
   {
     id: 7,
     name: "ToDo, Calculator, Text Util Mobile Application",
     description:
-      "A feature-rich mobile app that includes a to-do list, calculator, and text utilities, designed with React Native CLI and SQLite for smooth and efficient performance.",
-    video: Video, // Corrected property name
+      "A feature-rich mobile app that includes a to-do list, calculator, and text utilities, designed with React Native CLI and SQLite.",
+    video: Video,
     technologies: ["React Native CLI", "SQLite Database"],
     github: "https://github.com/shivam700355/MultiTaskt",
     live: "#",
@@ -109,7 +128,7 @@ export const Project = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {project.images && project.images.length > 1 ? (
+            {project.images ? (
               <div className="flex overflow-x-auto space-x-4">
                 {project.images.map((image, i) => (
                   <img
@@ -121,19 +140,13 @@ export const Project = () => {
                   />
                 ))}
               </div>
-            ) : project.images ? (
-              <img
-                src={project.images[0]}
-                alt={project.name}
-                className="w-full h-48 object-cover rounded-md"
-                onClick={() => setSelectedImage(project.images[0])}
-              />
             ) : project.video ? (
               <video controls className="w-full h-48 object-cover rounded-md">
                 <source src={project.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             ) : null}
+
             <h2 className="text-xl font-bold py-3 text-blue-950">
               <a
                 target="_blank"
@@ -146,9 +159,9 @@ export const Project = () => {
             </h2>
             <p className="text-gray-700 text-sm">{project.description}</p>
             <ul className="flex flex-wrap items-center my-4 gap-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map((tech, i) => (
                 <li
-                  key={index}
+                  key={i}
                   className="py-1 px-3 shadow-md rounded-md bg-gray-100 text-xs"
                 >
                   {tech}
