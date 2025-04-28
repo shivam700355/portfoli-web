@@ -107,7 +107,7 @@ const projects = [
       "A feature-rich mobile app that includes a to-do list, calculator, and text utilities, designed with React Native CLI and SQLite.",
     images: [multitask1,multitask2,multitask3,multitask4],
     technologies: ["React Native CLI", "SQLite Database"],
-    github: "https://github.com/shivam700355/MultiTaskt",
+    github: "https://github.com/shivam700355/MultiTask",
     live: "#",
   },
 ];
